@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-canvas: #FAFAFA;
+    --color-deep-slate: #1A1D2E;
+    --color-surface: #FFFFFF;
+    --color-shadow: #1A1D2E;
+    --color-mind-teal: #4EA8DE;
+    --color-insight-yellow: #FFD166;
+    --color-creativity-pink: #FF85A1;
+    --color-warm-coral: #F4A261;
+    --bg-image: url('https://i.pinimg.com/1200x/22/0a/75/220a75e9d26e0f4a4e19930495fda3ee.jpg');
+  }
+
+  html.dark {
+    --color-canvas: #1A1D2E;
+    --color-deep-slate: #F5F0EB;
+    --color-surface: #2A2D3E;
+    --color-shadow: #000000;
+    --color-mind-teal: #4B5563;
+    --color-insight-yellow: #4B5563;
+    --color-creativity-pink: #4B5563;
+    --color-warm-coral: #4B5563;
+    --bg-image: url('https://i.pinimg.com/736x/00/81/ec/0081ecdafd073771f8ed1079ceeb6f19.jpg');
+  }
+
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background-color: #FAFAFA;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #1A1D2E;
+  }
+
+  html.dark body {
+    background-color: #0D0E1A;
+    color: #F5F0EB;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  .shadow-hard {
+    box-shadow: 4px 4px 0px 0px var(--color-shadow);
+  }
+
+  .shadow-hard-hover:hover {
+    box-shadow: 6px 6px 0px 0px var(--color-shadow);
+  }
+
+  .transition-pop {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .btn-primary {
+    @apply border-2 font-semibold transition-pop shadow-hard active:translate-x-0.5 active:translate-y-0.5 active:shadow-none;
+    border-color: var(--color-deep-slate);
+  }
+
+  .card {
+    @apply border-2 shadow-hard;
+    background-color: var(--color-surface);
+    border-color: var(--color-deep-slate);
+  }
+
+  .card-glass {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  html.dark .card-glass {
+    background-color: rgba(42, 45, 62, 0.25);
+  }
+
+  /* === Dark mode overrides for Tailwind utilities === */
+
+  html.dark .bg-white {
+    background-color: var(--color-surface);
+  }
+
+  html.dark .text-slate-950 {
+    color: var(--color-deep-slate);
+  }
+
+  html.dark .ring-offset-slate-950 {
+    --tw-ring-offset-color: var(--color-surface);
+  }
+
+  /* Status button backgrounds → gray */
+  html.dark .bg-green-500,
+  html.dark .bg-green-600,
+  html.dark .bg-red-500,
+  html.dark .bg-red-600,
+  html.dark .bg-amber-500,
+  html.dark .bg-amber-600,
+  html.dark .bg-emerald-500 {
+    background-color: #4B5563;
+  }
+
+  /* Status hover states */
+  html.dark .hover\:bg-green-400:hover,
+  html.dark .hover\:bg-green-500:hover,
+  html.dark .hover\:bg-green-600:hover,
+  html.dark .hover\:bg-red-400:hover,
+  html.dark .hover\:bg-red-500:hover,
+  html.dark .hover\:bg-red-600:hover,
+  html.dark .hover\:bg-amber-400:hover,
+  html.dark .hover\:bg-amber-500:hover,
+  html.dark .hover\:bg-amber-600:hover,
+  html.dark .hover\:bg-emerald-400:hover {
+    background-color: #6B7280;
+  }
+
+  html.dark .hover\:bg-red-100:hover {
+    background-color: rgb(69 10 10 / 0.5);
+  }
+
+  /* Status tint backgrounds → dark tints */
+  html.dark .bg-green-50 {
+    background-color: rgb(5 46 22 / 0.4);
+  }
+
+  html.dark .bg-red-50 {
+    background-color: rgb(69 10 10 / 0.4);
+  }
+
+  html.dark .bg-amber-50 {
+    background-color: rgb(65 26 5 / 0.4);
+  }
+
+  /* Status text → light */
+  html.dark .text-green-600,
+  html.dark .text-green-400 {
+    color: #86efac;
+  }
+
+  html.dark .text-red-600,
+  html.dark .text-red-400 {
+    color: #fca5a5;
+  }
+
+  html.dark .text-amber-600,
+  html.dark .text-amber-400 {
+    color: #fcd34d;
+  }
+
+  html.dark .text-amber-300 {
+    color: #fde68a;
+  }
+
+  html.dark .text-emerald-300 {
+    color: #86efac;
+  }
+
+  html.dark .text-emerald-200 {
+    color: #a7f3d0;
+  }
+
+  html.dark .text-red-200 {
+    color: #fecaca;
+  }
+
+  /* Status borders */
+  html.dark .border-red-300,
+  html.dark .border-red-500 {
+    border-color: rgb(127 29 29 / 0.5);
+  }
+
+  html.dark .border-emerald-500,
+  html.dark .border-green-500 {
+    border-color: #4B5563;
+  }
+
+  html.dark .border-amber-600 {
+    border-color: #4B5563;
+  }
+
+  /* ModuleB amber fill */
+  html.dark .bg-amber-500 {
+    background-color: #4B5563;
+  }
+
+  /* ConfidenceCalibrator fill */
+  html.dark .bg-emerald-500,
+  html.dark .bg-amber-500 {
+    background-color: #4B5563;
+  }
+}
