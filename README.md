@@ -1,3 +1,5 @@
+![CogniMap logo](Logo.png)
+
 # CogniMap
 
 AI-powered human cognitive pattern analyzer.
