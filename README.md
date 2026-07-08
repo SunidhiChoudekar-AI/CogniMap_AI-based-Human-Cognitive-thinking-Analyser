@@ -1,4 +1,4 @@
-# <img src="Logo.png" alt="CogniMap logo" width="40" align="left"> CogniMap
+# <img src="Logo.png" alt="CogniMap logo" width="50" align="left"> CogniMap
 
 AI-powered human cognitive pattern analyzer.
 
