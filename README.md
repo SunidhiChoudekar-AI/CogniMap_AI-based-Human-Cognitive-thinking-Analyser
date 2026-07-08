@@ -2,6 +2,22 @@
 
 AI-powered human cognitive pattern analyzer.
 
+## Output Images
+
+![CogniMap main dashboard](Output-Images/Main.png)
+
+| Module | Output |
+| --- | --- |
+| Attention & Focus | ![Attention and Focus output](Output-Images/Attention%26Focus.png) |
+| Creativity | ![Creativity output](Output-Images/Creativity.png) |
+| Decision Making | ![Decision Making output](Output-Images/Decision-Making.png) |
+| Emotional Intelligence | ![Emotional Intelligence output](Output-Images/Emotional-Intelligence.png) |
+| Executive Functions | ![Executive Functions output](Output-Images/Executive-Functions.png) |
+| Memory | ![Memory output](Output-Images/Memory.png) |
+| Metacognition Confidence | ![Metacognition Confidence output](Output-Images/Metacognition-Confidence.png) |
+| Reasoning | ![Reasoning output](Output-Images/Reasoning.png) |
+| Social Cognition | ![Social Cognition output](Output-Images/Social-Cognition.png) |
+
 ## Backend
 
 1. Create a Python virtual environment if needed:
